@@ -11,7 +11,7 @@ public class BrandPluginMessageListener implements PluginMessageListener {
     @Override
     public void onPluginMessageReceived(String channel, Player p, byte[] msg) {
         try {
-            Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.GRAY +"[DEV] " +ChatColor.GOLD +p.getDisplayName() +ChatColor.YELLOW +" has joined using " +ChatColor.AQUA +new String(msg, "UTF-8").substring(1));
+            Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.GRAY +"[CLIENT DETECTOR] " +ChatColor.GOLD +p.getDisplayName() +ChatColor.YELLOW +" has joined using " +ChatColor.AQUA +new String(msg, "UTF-8").substring(1));
             for(Player all : Bukkit.getServer().getOnlinePlayers()) {
             	if(all.isOp()) {
             		all.sendMessage(ChatColor.GRAY +"[CLIENT DETECTOR] " +ChatColor.GOLD +p.getDisplayName() +ChatColor.YELLOW +" has joined using " +ChatColor.AQUA +new String(msg, "UTF-8").substring(1));
